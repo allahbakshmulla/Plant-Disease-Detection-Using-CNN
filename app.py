@@ -387,6 +387,8 @@ class_labels = [
 healthy_labels = [
     'Bell Pepper Healthy', 'Corn Healthy', 'Potato Healthy', 'Tomato Healthy'
 ]
+plant_labels=["Bell Pepper","Corn","Potato","Tomato"]
+
 
 # Define colors for styling
 colors = {
@@ -437,6 +439,7 @@ def preprocess_image(img):
 
 # Streamlit app code
 def main():
+    st.write("**Note:** Only supported plants are:", ", ".join(plant_labels))
     st.title("Plant Disease Detection")
 
     # Drag and drop functionality for image upload
